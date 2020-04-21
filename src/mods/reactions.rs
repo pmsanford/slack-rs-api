@@ -323,6 +323,7 @@ pub struct GetResponseMessage {
     error: Option<String>,
     #[serde(default)]
     ok: bool,
+    pub ts: crate::Timestamp,
     #[serde(rename = "type")]
     pub ty: String,
 }
@@ -598,6 +599,7 @@ pub struct ListResponseItemFileComment {
 #[derive(Clone, Debug, Deserialize)]
 pub struct ListResponseItemMessage {
     pub channel: String,
+    pub ts: crate::Timestamp,
     #[serde(rename = "type")]
     pub ty: String,
 }
