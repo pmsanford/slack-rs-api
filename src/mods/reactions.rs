@@ -321,7 +321,6 @@ pub struct GetResponseFileComment {
 pub struct GetResponseMessage {
     pub channel: String,
     error: Option<String>,
-    pub message: crate::Message,
     #[serde(default)]
     ok: bool,
     #[serde(rename = "type")]
@@ -599,7 +598,6 @@ pub struct ListResponseItemFileComment {
 #[derive(Clone, Debug, Deserialize)]
 pub struct ListResponseItemMessage {
     pub channel: String,
-    pub message: crate::Message,
     #[serde(rename = "type")]
     pub ty: String,
 }
