@@ -51,6 +51,6 @@ impl<'de> ::serde::Deserialize<'de> for Timestamp {
 impl Timestamp {
     pub fn to_param_value(&self) -> String {
         let t: f64 = self.into();
-        serde_json::to_string(&t).unwrap()
+        format!("{:.6}", t)
     }
 }
